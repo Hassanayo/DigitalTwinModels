@@ -35,7 +35,6 @@
     },
     "status": {
       "type": "string",
-      "enum": ["available", "onDuty", "offDuty", "unavailable"],
       "description": "Current working status",
       "readOnly": false
     },
@@ -66,8 +65,7 @@
     "updateStatus": {
       "description": "Update the personnel's status",
       "input": {
-        "type": "string",
-        "enum": ["available", "onDuty", "offDuty", "unavailable"]
+        "type": "string"
       }
     },
     "assignToLocation": {
