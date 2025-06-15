@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "id": "urn:org:healthcare:environment-001",
+  "title": "EnvironmentTwin",
+  "description": "A digital twin representing environmental conditions within a healthcare unit.",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "temperature": {
+      "type": "number",
+      "description": "Current room temperature in Celsius"
+    },
+    "humidity": {
+      "type": "number",
+      "description": "Humidity percentage"
+    },
+    "airQualityIndex": {
+      "type": "number",
+      "description": "Air quality index (AQI)"
+    },
+    "noiseLevel": {
+      "type": "number",
+      "description": "Noise level in decibels (dB)"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location of the sensor/environment"
+    }
+  },
+  "events": {
+    "thresholdExceeded": {
+      "description": "Triggered when temperature, AQI, or noise exceeds safe threshold",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "id": "urn:org:healthcare:admin-001",
+  "title": "AdminTwin",
+  "description": "A digital twin representing a system administrator managing all digital twins and system operations.",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "adminId": {
+      "type": "string",
+      "description": "Unique ID for the admin",
+      "readOnly": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Administrator's full name",
+      "readOnly": true
+    },
+    "role": {
+      "type": "string",
+      "description": "Role of the admin",
+      "readOnly": false
+    },
+    "lastLogin": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last login timestamp"
+    },
+    "dashboardPreferences": {
+      "type": "object",
+      "description": "Admin's UI dashboard settings",
+      "properties": {
+        "theme": { "type": "string" },
+        "refreshInterval": { "type": "number", "description": "Dashboard auto-refresh interval in seconds" }
+      }
+    }
+  },
+  "actions": {
+    "createDigitalTwin": {
+      "description": "Create a new digital twin entity",
+      "input": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "id": { "type": "string" }
+        }
+      }
+    },
+    "deleteDigitalTwin": {
+      "description": "Delete a digital twin entity by ID",
+      "input": {
+        "type": "string"
+      }
+    },
+    "updateDashboard": {
+      "description": "Update dashboard preferences",
+      "input": {
+        "type": "object"
+      }
+    }
+  },
+  "events": {
+    "systemAlert": {
+      "description": "Triggered when system errors or warnings occur",
+      "data": {
+        "type": "string"
+      }
+    },
+    "auditLog": {
+      "description": "Triggered when a critical system event is logged",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}

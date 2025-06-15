@@ -10,7 +10,7 @@
   "id": "urn:org:healthcare:supervisor-001",
   "title": "SupervisorTwin",
   "description": "A digital twin representing a workforce supervisor responsible for monitoring and coordinating personnel.",
-   "version": {
+  "version": {
     "model": "1.0.0"
   },
   "properties": {

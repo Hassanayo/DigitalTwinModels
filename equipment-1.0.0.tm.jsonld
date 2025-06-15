@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "id": "urn:org:healthcare:equipment-001",
+  "title": "EquipmentTwin",
+  "description": "A digital twin representing medical equipment or tools used in healthcare.",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "equipmentId": {
+      "type": "string",
+      "description": "Unique ID of the equipment",
+      "readOnly": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the equipment",
+      "readOnly": true
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the equipment"
+    },
+    "lastMaintenanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when the equipment was last maintained"
+    },
+    "location": {
+      "type": "string",
+      "description": "Physical location of the equipment"
+    }
+  },
+  "actions": {
+    "scheduleMaintenance": {
+      "description": "Trigger maintenance for the equipment",
+      "input": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  },
+  "events": {
+    "failureDetected": {
+      "description": "An event triggered when equipment failure is detected",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
