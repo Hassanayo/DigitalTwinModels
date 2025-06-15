@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "id": "urn:org:healthcare:supervisor-001",
+  "title": "SupervisorTwin",
+  "description": "A digital twin representing a workforce supervisor responsible for monitoring and coordinating personnel.",
+   "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Supervisor full name",
+      "readOnly": true
+    },
+    "supervisorId": {
+      "type": "string",
+      "description": "Unique ID for the supervisor",
+      "readOnly": true
+    },
+    "department": {
+      "type": "string",
+      "description": "Department the supervisor manages",
+      "readOnly": true
+    },
+    "status": {
+      "type": "string",
+      "description": "Current availability status"
+    },
+    "personnelList": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of supervised personnel IDs"
+    }
+  },
+  "actions": {
+    "assignPersonnel": {
+      "description": "Assign a new personnel under the supervisor",
+      "input": {
+        "type": "string"
+      }
+    },
+    "removePersonnel": {
+      "description": "Remove a personnel from the supervisor",
+      "input": {
+        "type": "string"
+      }
+    }
+  },
+  "events": {
+    "alertRaised": {
+      "description": "Triggered when an urgent situation is reported by a subordinate",
+      "data": {
+        "type": "string"
+      }
+    },
+    "personnelUpdated": {
+      "description": "Triggered when a personnel’s status or assignment changes",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
