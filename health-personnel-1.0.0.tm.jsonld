@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "title": "HealthPersonnelTwin",
+  "description": "A digital twin representing a healthcare personnel (e.g., nurse or doctor).",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the health personnel",
+      "readOnly": true
+    },
+    "personnelId": {
+      "type": "string",
+      "description": "Unique ID assigned to the personnel",
+      "readOnly": true
+    },
+    "role": {
+      "type": "string",
+      "description": "Personnel role, e.g., Doctor, Nurse, Technician",
+      "readOnly": true
+    },
+    "department": {
+      "type": "string",
+      "description": "Assigned hospital department or unit",
+      "readOnly": true
+    },
+    "status": {
+      "type": "string",
+      "enum": ["available", "on-duty", "off-duty", "unavailable"],
+      "description": "Current working status",
+      "readOnly": false
+    },
+    "location": {
+      "type": "string",
+      "description": "Current physical or ward location",
+      "readOnly": false
+    },
+    "shiftStart": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Start time of current or next shift",
+      "readOnly": false
+    },
+    "shiftEnd": {
+      "type": "string",
+      "format": "date-time",
+      "description": "End time of current or next shift",
+      "readOnly": false
+    },
+    "onCall": {
+      "type": "boolean",
+      "description": "Is the personnel currently on call?",
+      "readOnly": false
+    }
+  },
+  "actions": {
+    "updateStatus": {
+      "description": "Update the personnel's status",
+      "input": {
+        "type": "string",
+        "enum": ["available", "on-duty", "off-duty", "unavailable"]
+      }
+    },
+    "assignToLocation": {
+      "description": "Assign the personnel to a new location or ward",
+      "input": {
+        "type": "string"
+      }
+    }
+  },
+  "events": {
+    "emergencyCall": {
+      "description": "Triggered when the personnel is urgently needed",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
