@@ -13,7 +13,12 @@
     "model": "1.0.2"
   },
   "links": [
-    
+    {
+      "rel": "tm:submodel",
+      "href": "https://eclipse-ditto.github.io/ditto-examples/wot/models/dimmable-colored-lamp-1.0.0.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "Vitals"
+    }
   ],
   "properties": {
     "name": {
