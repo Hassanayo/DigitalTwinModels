@@ -7,10 +7,12 @@
     },
     "properties": {
         "powerStatus": {
+            "title": "Powerstatus",
             "type": "boolean",
             "description": "True=On; False=Off"
         },
         "usageHours": {
+            "title": "Usagehours",
             "type": "number"
         }
     }
