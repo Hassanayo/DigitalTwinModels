@@ -7,12 +7,15 @@
     },
     "properties": {
         "temperature": {
+            "title": "Temperature",
             "type": "number"
         },
         "humidity": {
+            "title": "Humidity",
             "type": "number"
         },
         "airQuality": {
+            "title": "AirQuality",
             "type": "string"
         }
     }
