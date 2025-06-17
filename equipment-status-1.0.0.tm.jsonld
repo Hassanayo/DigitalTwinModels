@@ -1,0 +1,17 @@
+{
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": "tm:ThingModel",
+    "title": "Equipment Status",
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties": {
+        "powerStatus": {
+            "type": "boolean",
+            "description": "True=On; False=Off"
+        },
+        "usageHours": {
+            "type": "number"
+        }
+    }
+}
