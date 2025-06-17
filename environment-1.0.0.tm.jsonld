@@ -12,6 +12,14 @@
   "version": {
     "model": "1.0.0"
   },
+  "links": [
+    {
+        "rel": "tm:submodel",
+        "href": "https://raw.githubusercontent.com/Hassanayo/DigitalTwinModels/refs/heads/main/environment-conditions-1.0.0.tm.jsonld",
+        "type": "application/tm+json",
+        "instanceName": "environmentConditions"
+      }
+  ],
   "properties": {
     "temperature": {
       "type": "number",
