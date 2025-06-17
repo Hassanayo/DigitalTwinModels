@@ -12,6 +12,14 @@
   "version": {
     "model": "1.0.0"
   },
+  "links": [
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/Hassanayo/DigitalTwinModels/refs/heads/main/vitals-1.0.0.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "Vitals"
+    }
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -35,7 +43,6 @@
     },
     "status": {
       "type": "string",
-      "enum": ["available", "unavailable"],
       "description": "Current working status",
       "readOnly": false
     },
@@ -66,8 +73,7 @@
     "updateStatus": {
       "description": "Update the personnel's status",
       "input": {
-        "type": "string",
-        "enum": ["available", "unavailable"]
+        "type": "string"
       }
     },
     "assignToLocation": {
