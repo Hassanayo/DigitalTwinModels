@@ -1,7 +1,5 @@
 {
-  "@context": [
-    "https://www.w3.org/2022/wot/td/v1.1"
-  ],
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
   "@type": "tm:ThingModel",
   "title": "Personnel Vitals",
   "version": {
@@ -9,25 +7,17 @@
   },
   "tm:optional": [],
   "properties": {
-    "vitals": {
-      "title": "Vitals",
-      "type": "object",
-      "description": "Live health vitals data of personnel",
-      "properties": {
-        "heartRate": {
-          "type": "number",
-          "minimum": 0
-        },
-        "bloodPressure": {
-          "type": "string"
-        },
-        "oxygenSaturation": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 100
-        }
-      },
-      "readOnly": false
+    "heartRate": {
+      "type": "number",
+      "minimum": 0
+    },
+    "bloodPressure": {
+      "type": "string"
+    },
+    "oxygenSaturation": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
     }
   }
 }

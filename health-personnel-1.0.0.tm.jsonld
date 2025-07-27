@@ -46,6 +46,11 @@
       "description": "Current working status",
       "readOnly": false
     },
+    "gender": {
+      "type": "string",
+      "description": "gender of the patient",
+      "readOnly": true
+    },
     "location": {
       "type": "string",
       "description": "Current physical or ward location",

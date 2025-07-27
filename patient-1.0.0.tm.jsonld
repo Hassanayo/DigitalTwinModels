@@ -1,0 +1,100 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "id": "urn:org:healthcare:patient-001",
+  "title": "PatientTwin",
+  "description": "A digital twin representing a patient in the hospital system.",
+  "version": {
+    "model": "1.0.0"
+  },
+  "links": [
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/Hassanayo/DigitalTwinModels/refs/heads/main/vitals-1.0.0.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "Vitals"
+    }
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "name of the patient",
+      "readOnly": true
+    },
+    "patientId": {
+      "type": "string",
+      "description": "name of the patient",
+      "readOnly": true
+    },
+    "age": {
+      "type": "number",
+      "description": "age of the patient in years",
+      "readOnly": true
+    },
+    "gender": {
+      "type": "string",
+      "description": "gender of the patient",
+      "readOnly": true
+    },
+    "roomNumber": {
+      "type": "string",
+      "description": "Room number assigned to the patient",
+      "readOnly": true
+    },
+    "bloodType": {
+      "type": "string",
+      "description": "blood type of the patient",
+      "readOnly": true
+    },
+    "genotype": {
+      "type": "string",
+      "description": "genotype of the patient",
+      "readOnly": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "phone number of the patient",
+      "readOnly": true
+    },
+    "email": {
+      "type": "string",
+      "description": "email address of the patient",
+      "readOnly": true
+    },
+    "address": {
+      "type": "string",
+      "description": "Home address of the patient",
+      "readOnly": true
+    },
+    "nextOfKin": {
+      "type": "string",
+      "description": "next of kin of the patient",
+      "readOnly": true
+    },
+    "personnelAssigned": {
+      "type": "string",
+      "description": "health personnel assigned to the patient",
+      "readOnly": true
+    },
+    "equipmentUsed": {
+      "type":"object"
+    },
+    "existingConditions": {
+      "type":"object",
+      "readOnly": true
+    }
+  },
+  "events": {
+    "systemAlert": {
+      "description": "Triggered when system errors or warnings occur",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
