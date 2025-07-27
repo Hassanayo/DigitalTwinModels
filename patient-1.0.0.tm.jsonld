@@ -44,49 +44,59 @@
     "roomNumber": {
       "type": "string",
       "description": "Room number assigned to the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "bloodType": {
       "type": "string",
       "description": "blood type of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "genotype": {
       "type": "string",
       "description": "genotype of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "phoneNumber": {
       "type": "string",
       "description": "phone number of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "email": {
       "type": "string",
       "description": "email address of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "address": {
       "type": "string",
       "description": "Home address of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "nextOfKin": {
       "type": "string",
       "description": "next of kin of the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "personnelAssigned": {
       "type": "string",
       "description": "health personnel assigned to the patient",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     },
     "equipmentUsed": {
-      "type":"object"
+      "type":"object",
+      "optional": true
     },
     "existingConditions": {
       "type":"object",
-      "readOnly": true
+      "readOnly": true,
+      "optional": true
     }
   },
   "events": {
