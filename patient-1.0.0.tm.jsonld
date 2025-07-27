@@ -44,7 +44,7 @@
       "readOnly": true
     },
     "age": {
-      "type": "number",
+      "type": "string",
       "description": "age of the patient in years",
       "readOnly": true
     },
