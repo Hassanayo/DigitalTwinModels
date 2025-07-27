@@ -9,6 +9,18 @@
   "id": "urn:org:healthcare:patient-001",
   "title": "PatientTwin",
   "description": "A digital twin representing a patient in the hospital system.",
+  "tm:optional": [
+        "/properties/gender",
+        "/properties/roomNumber",
+        "/properties/bloodType",
+        "/properties/genotype",
+        "/properties/phoneNumber",
+        "/properties/address",
+        "/properties/nextOfKin",
+        "/properties/personnelAssigned",
+        "/properties/equipmentUsed",
+        "/properties/existingConditions"
+    ],
   "version": {
     "model": "1.0.0"
   },
@@ -44,59 +56,49 @@
     "roomNumber": {
       "type": "string",
       "description": "Room number assigned to the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "bloodType": {
       "type": "string",
       "description": "blood type of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "genotype": {
       "type": "string",
       "description": "genotype of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "phoneNumber": {
       "type": "string",
       "description": "phone number of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "email": {
       "type": "string",
       "description": "email address of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "address": {
       "type": "string",
       "description": "Home address of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "nextOfKin": {
       "type": "string",
       "description": "next of kin of the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "personnelAssigned": {
       "type": "string",
       "description": "health personnel assigned to the patient",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     },
     "equipmentUsed": {
-      "type":"object",
-      "optional": true
+      "type":"object"
     },
     "existingConditions": {
       "type":"object",
-      "readOnly": true,
-      "optional": true
+      "readOnly": true
     }
   },
   "events": {
