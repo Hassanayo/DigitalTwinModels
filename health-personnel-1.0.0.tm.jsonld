@@ -9,6 +9,18 @@
   "@type": "tm:ThingModel",
   "title": "HealthPersonnelTwin",
   "description": "A digital twin representing a healthcare personnel (e.g., nurse or doctor).",
+  "tm:optional": [
+        "/properties/gender",
+        "/properties/status",
+        "/properties/location",
+        "/properties/genotype",
+        "/properties/phoneNumber",
+        "/properties/address",
+        "/properties/nextOfKin",
+        "/properties/shiftStart",
+        "/properties/shiftEnd",
+        "/properties/onCall"
+    ],
   "version": {
     "model": "1.0.0"
   },
@@ -26,7 +38,7 @@
       "description": "Full name of the health personnel",
       "readOnly": true
     },
-    "personnelId": {
+    "id": {
       "type": "string",
       "description": "Unique ID assigned to the personnel",
       "readOnly": true
