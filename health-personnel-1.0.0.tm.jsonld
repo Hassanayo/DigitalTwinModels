@@ -17,9 +17,10 @@
         "/properties/phoneNumber",
         "/properties/address",
         "/properties/nextOfKin",
-        "/properties/shiftStart",
-        "/properties/shiftEnd",
-        "/properties/onCall"
+        "/properties/shiftTime",
+        "/properties/onCall",
+        "/properties/bloodType",
+        "/properties/email"
     ],
   "version": {
     "model": "1.0.0"
@@ -41,6 +42,11 @@
     "id": {
       "type": "string",
       "description": "Unique ID assigned to the personnel",
+      "readOnly": true
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "description": "date of birth of the personnel",
       "readOnly": true
     },
     "role": {
@@ -68,22 +74,36 @@
       "description": "Current physical or ward location",
       "readOnly": false
     },
-    "shiftStart": {
+    "shiftTime": {
       "type": "string",
       "format": "date-time",
-      "description": "Start time of current or next shift",
-      "readOnly": false
-    },
-    "shiftEnd": {
-      "type": "string",
-      "format": "date-time",
-      "description": "End time of current or next shift",
+      "description": "time of current or next shift",
       "readOnly": false
     },
     "onCall": {
       "type": "boolean",
       "description": "Is the personnel currently on call?",
       "readOnly": false
+    },
+    "bloodType": {
+      "type": "string",
+      "description": "blood type of the patient",
+      "readOnly": true
+    },
+    "genotype": {
+      "type": "string",
+      "description": "genotype of the patient",
+      "readOnly": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "phone number of the patient",
+      "readOnly": true
+    },
+    "email": {
+      "type": "string",
+      "description": "email address of the patient",
+      "readOnly": true
     }
   },
   "actions": {
