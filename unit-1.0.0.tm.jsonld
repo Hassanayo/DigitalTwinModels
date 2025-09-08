@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "title": "PatientTwin",
+  "description": "A digital twin representing a patient in the hospital system.",
+  "tm:optional": [
+        "/properties/location",
+        "/properties/assignedPersonnel",
+        "/properties/assignedPatients",
+        "/properties/unitHead"
+    ],
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "name of the patient",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string",
+      "description": "name of the patient",
+      "readOnly": true
+    },
+    "unitHead": {
+      "type": "string",
+      "description": "head of the unit",
+      "readOnly": true
+    },
+    "location": {
+      "type": "string",
+      "description": "location of the unit",
+      "readOnly": true
+    },
+    "assignedPersonnel": {
+      "type": "object",
+      "description": "Personnel assigned to the unit",
+      "readOnly": true,
+      "properties": {
+        "id": { "type": "string", "description": "ID of the personnel" },
+        "name": { "type": "string", "description": "Name of the personnel" }
+      }
+    },
+    "assignedPatients": {
+      "type": "object",
+      "description": "Patients in the unit",
+      "readOnly": true,
+      "properties": {
+        "id": { "type": "string", "description": "ID of the personnel" },
+        "name": { "type": "string", "description": "Name of the personnel" }
+      }
+    }
+  }
+}
